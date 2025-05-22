@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Zukunftspartei</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Bebas Neue', sans-serif;
+      background-color: #F4EFF7;
+      color: #222;
+    }
+
+    header {
+      background-color: #8C3FAD;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: #8C3FAD;
+    }
+
+    .themen {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 40px 20px;
+    }
+
+    .themen button {
+      background-color: #CCA9DD;
+      color: white;
+      font-size: 20px;
+      border: none;
+      border-radius: 25px;
+      padding: 15px 25px;
+      cursor: pointer;
+    }
+
+    .inhalt {
+      display: none;
+      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .inhalt h2 {
+      color: #8C3FAD;
+      margin-top: 0;
+    }
+
+    .bild {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .bild img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #8C3FAD;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    iframe {
+      width: 90%;
+      max-width: 800px;
+      height: 450px;
+      display: block;
+      margin: 40px auto;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://i.postimg.cc/sfNWhP1j/IMG-1560.png" alt="Logo Zukunftspartei">
+  <nav>
+    <a href="#ueberuns">Über uns</a>
+    <a href="#wahlprogramm">Themen</a>
+    <a href="#video">Wahlvideo</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Willkommen bei der Zukunftspartei</h1>
+  <p>Wir gestalten die Zukunft Deutschlands – sozial, digital, gerecht.</p>
+</section>
+
+<div id="wahlprogramm" class="themen">
+  <button onclick="zeigeInhalt('bildung')">Bildung</button>
+  <button onclick="zeigeInhalt('arbeit')">Arbeit & Wirtschaft</button>
+  <button onclick="zeigeInhalt('gesundheit')">Gesundheit & Pflege</button>
+  <button onclick="zeigeInhalt('rente')">Rente</button>
+  <button onclick="zeigeInhalt('migration')">Migration</button>
+</div>
+
+<div id="bildung" class="inhalt">
+  <h2>Bildung</h2>
+  <p><strong>Einheitliche Grundschule bis Klasse 7:</strong> soziale Gerechtigkeit, Talenterkennung, später differenzierte Schulformen.</p>
+  <p><strong>Ab Klasse 8:</strong></p>
+  <ul>
+    <li><strong>Gymnasium:</strong> Talentförderung, Wahlpflichtfächer</li>
+    <li><strong>Realschule:</strong> Berufsorientierung, Praktika</li>
+    <li><strong>Hauptschule:</strong> praxisnah, Schwerpunkt Handwerk & Soziales</li>
+  </ul>
+  <p><strong>Digitale Bildung stärken:</strong> Geräte, Plattformen, gezielte Förderung</p>
+  <p><strong>Lehrermangel bekämpfen:</strong> Gehalt, kleinere Klassen, weniger Bürokratie</p>
+  <p><strong>Warum wichtig?</strong> Bildung = Grundlage für Selbstbestimmung, Wirtschaft & Gerechtigkeit</p>
+</div>
+
+<div id="arbeit" class="inhalt">
+  <h2>Arbeit & Wirtschaft</h2>
+  <p><strong>Fachkräftemangel bekämpfen:</strong> Einwanderung vereinfachen, Abschlüsse anerkennen, Umschulungen fördern</p>
+  <p><strong>Arbeit attraktiver machen:</strong></p>
+  <ul>
+    <li>Weniger Sozialleistungen bei Arbeitsverweigerung</li>
+    <li>Mehr Anreize (z. B. steuerlich)</li>
+    <li>Kinderbetreuung ausbauen</li>
+  </ul>
+  <p><strong>Bürokratie abbauen:</strong> Digitalisierung, Start-up-Förderung</p>
+  <p><strong>Warum wichtig?</strong> Arbeitsmarkt sichern = soziale & wirtschaftliche Zukunft sichern</p>
+</div>
+
+<div id="gesundheit" class="inhalt">
+  <h2>Gesundheit & Pflege</h2>
+  <p>Für uns zählt: Zugang zur medizinischen Versorgung unabhängig vom Einkommen, Ausbau der Pflegekräfte durch bessere Löhne & Arbeitsbedingungen, mehr Digitalisierung im Gesundheitssystem.</p>
+</div>
+
+<div id="rente" class="inhalt">
+  <h2>Rente</h2>
+  <p>Wir fordern eine stabile Rente für alle: Garantierente über dem Existenzminimum, Einbezug aller Erwerbstätigen in die Rentenkasse (auch Politiker & Selbstständige), bessere Anreize für längeres Arbeiten.</p>
+</div>
+
+<div id="migration" class="inhalt">
+  <h2>Migration</h2>
+  <p>Wir setzen uns für eine humane Migrationspolitik ein: legale Fluchtwege, schnellere Integration durch Sprachkurse & Jobs, klare Einwanderungsregeln und konsequente Durchsetzung der Gesetze.</p>
+</div>
+
+<div class="bild">
+  <img src="https://images.unsplash.com/photo-1581091215367-59ab6f7d8433" alt="Symbolbild Zukunft">
+</div>
+
+<div id="ueberuns" class="inhalt" style="display: block;">
+  <h2>Über uns</h2>
+  <p>Die Zukunftspartei steht für Vision, Veränderung und Verantwortung. Wir sind eine junge Bewegung, die soziale Gerechtigkeit, wirtschaftliche Stabilität und digitale Modernisierung vereinen will. Unsere Mitglieder Jamie Adler, Greta Buda und Kseniia Karabchuk setzen sich leidenschaftlich für eine lebenswerte Zukunft ein.</p>
+</div>
+
+<div id="video">
+  <iframe src=" https://streamable.com/7vv8ey" allowfullscreen></iframe>
+</div>
+
+<footer>
+  Zukunftspartei – Wir weisen den Weg.
+</footer>
+
+<script>
+  function zeigeInhalt(id) {
+    document.querySelectorAll('.inhalt').forEach(el => el.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
